@@ -3,172 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clash Royale MOD - Download Now</title>
+  <title>Clash.Mod Info</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      color: #fff;
+      font-family: 'Press Start 2P', monospace;
+      background: linear-gradient(135deg, #000000, #0a0a0a 80%);
+      color: #00ffea;
       text-align: center;
       padding: 20px;
+      overflow-x: hidden;
     }
-    h1 { font-size: 2.5em; margin-bottom: 10px; }
-    p { font-size: 1.1em; max-width: 700px; margin: 0 auto 20px; }
+
+    /* 🔥 Glitch Title */
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      position: relative;
+      color: #00ffe1;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px #00ffe1, 0 0 20px #0077ff;
+      animation: flicker 2s infinite alternate;
+    }
+
+    h1::before, h1::after {
+      content: "Clash.Mod Info";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      color: #ff004c;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    h1::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+    }
+
+    h1::after {
+      color: #00ffea;
+      animation: glitchBottom 1.5s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitchTop {
+      0% { clip: rect(0, 900px, 0, 0); }
+      10% { clip: rect(10px, 900px, 40px, 0); transform: translate(-3px, -3px);}
+      30% { clip: rect(40px, 900px, 80px, 0); transform: translate(3px, -2px);}
+      50% { clip: rect(10px, 900px, 60px, 0); transform: translate(-2px, 3px);}
+      70% { clip: rect(50px, 900px, 90px, 0); transform: translate(2px, -1px);}
+      100% { clip: rect(0, 900px, 0, 0); }
+    }
+
+    @keyframes glitchBottom {
+      0% { clip: rect(0, 900px, 0, 0); }
+      20% { clip: rect(60px, 900px, 100px, 0); transform: translate(3px, 2px);}
+      40% { clip: rect(30px, 900px, 60px, 0); transform: translate(-3px, 1px);}
+      60% { clip: rect(20px, 900px, 80px, 0); transform: translate(2px, -2px);}
+      80% { clip: rect(70px, 900px, 120px, 0); transform: translate(-2px, 3px);}
+      100% { clip: rect(0, 900px, 0, 0); }
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+      70% { opacity: 0.6; }
+    }
+
+    p {
+      font-size: 0.9em;
+      max-width: 750px;
+      margin: 0 auto 20px;
+      color: #bbb;
+    }
+
     .card {
-      background: rgba(0,0,0,0.4);
-      padding: 20px;
+      background: rgba(10, 10, 10, 0.85);
+      padding: 25px;
       border-radius: 15px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin: 25px auto;
+      max-width: 650px;
+      box-shadow: 0 0 25px rgba(0,255,230,0.3);
+      border: 1px solid rgba(0,255,230,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(0,255,230,0.7);
+    }
+
     .btn-download {
       display: inline-block;
-      background: #ffcc00;
+      background: #00ffe1;
       color: #000;
-      font-size: 1.2em;
+      font-size: 1em;
       font-weight: bold;
       padding: 12px 25px;
       border-radius: 10px;
       text-decoration: none;
       transition: 0.3s;
+      box-shadow: 0 0 15px #00ffe1;
     }
-    .btn-download:hover { background: #ffd633; }
+
+    .btn-download:hover {
+      background: #00bfff;
+      box-shadow: 0 0 25px #00bfff;
+    }
+
     .disabled-btn {
       display: inline-block;
-      background: #666;
-      color: #ccc;
-      font-size: 1.2em;
+      background: #111;
+      color: #ff004c;
+      font-size: 1em;
       font-weight: bold;
       padding: 12px 25px;
       border-radius: 10px;
       text-decoration: none;
-      pointer-events: none;
       opacity: 0.7;
+      border: 1px solid #ff004c;
+      box-shadow: 0 0 15px #ff004c;
     }
+
     .social-icons img {
-      width: 35px; height: 35px; margin: 10px; vertical-align: middle; transition: 0.3s;
+      width: 40px; height: 40px;
+      margin: 12px;
+      vertical-align: middle;
+      transition: transform 0.3s;
+      filter: drop-shadow(0 0 8px #00ffe1);
     }
-    .social-icons img:hover { transform: scale(1.2); }
-    .flag-img { width: 40px; height: auto; vertical-align: middle; margin-left: 8px; }
-    .countdown { font-size: 1.5em; font-weight: bold; margin: 15px 0; color: #ffcc00; }
-    footer { margin-top: 40px; font-size: 0.9em; opacity: 0.8; }
+
+    .social-icons img:hover {
+      transform: scale(1.25);
+      filter: drop-shadow(0 0 18px #ff004c);
+    }
+
+    /* 🌊 Waving Flag */
+    .flag {
+      display: inline-block;
+      width: 30px;
+      height: auto;
+      margin-left: 6px;
+      vertical-align: middle;
+      animation: wave 1.5s infinite ease-in-out;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(2deg) scale(1.05); }
+      50% { transform: rotate(0deg) scale(1); }
+      75% { transform: rotate(-2deg) scale(1.05); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.7em;
+      opacity: 0.5;
+    }
   </style>
 </head>
 <body>
-  <h1>🔥 Clash.Mod Downloads 🔥</h1>
+  <h1>Clash.Mod Info</h1>
 
   <div class="card">
     <h2>Clash Royale MOD</h2>
-    <p>Download <b>Clash Royale MOD</b> with <b>Rare Cards & Bombs</b>. Enjoy unique gameplay features and special challenges!</p>
-    <a href="https://link-center.net/1381901/lECf5Bw5pO2v" class="btn-download" id="modDownload">⬇ Download Now</a>
+    <p>Download <b>Clash Royale MOD</b> with <b>Rare Cards & Explosive Features</b>. Enter the hacked arena and rule the game!</p>
+    <a href="https://link-center.net/1381901/lECf5Bw5pO2v" class="btn-download">⬇ Download Now</a>
   </div>
 
   <div class="card">
     <h2>Clash Royale China 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China Flag" class="flag-img">
+      <img src="https://flagcdn.com/w40/cn.png" alt="China Flag" class="flag">
     </h2>
-    <p>Get the exclusive <b>Chinese version of Clash Royale</b> with <b>Rare Cards & Bombs</b> and special features available only on China servers.</p>
-    <div class="countdown" id="countdown">Loading...</div>
-    <a id="chinaDownload" href="#" class="disabled-btn">⏳ Download not available yet</a>
+    <p>Exclusive <b>Chinese Edition</b> with hacks, special servers and features never seen before.</p>
+    <a class="disabled-btn">Coming Soon</a>
   </div>
 
   <div class="card">
-    <h2>📱 Contact</h2>
+    <h2>Contact</h2>
     <div class="social-icons">
-      <a href="https://instagram.com/itss.marcusss" target="_blank" id="instaLink">
+      <a href="https://instagram.com/itss.marcusss" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
       </a>
-      <a href="https://tiktok.com/@clash.mod" target="_blank" id="tiktokLink">
+      <a href="https://tiktok.com/@clash.mod" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
       </a>
     </div>
   </div>
 
   <footer>
-    <p>Disclaimer: This is a promotional page for educational purposes only. Clash Royale is owned by Supercell.</p>
+    <p>Follow on TikTok and Instagram for more!.</p>
   </footer>
-
-  <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    emailjs.init("zq9Ku4L0FECKAO_EK"); // tu User ID
-  </script>
-
-  <script>
-    // ----------------- Countdown -----------------
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 2);
-
-    const countdown = document.getElementById("countdown");
-    const chinaDownload = document.getElementById("chinaDownload");
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        countdown.innerHTML = "✅ Now available!";
-        chinaDownload.href = "https://link-center.net/1381901/lECf5Bw5pO2v";
-        chinaDownload.className = "btn-download";
-        chinaDownload.innerHTML = "⬇ Download China Version";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-
-    // ----------------- Click Tracking -----------------
-    let clicksDownload = 0;
-    let clicksChinaDownload = 0;
-    let clicksInstagram = 0;
-    let clicksTikTok = 0;
-
-    document.getElementById('modDownload').addEventListener('click', () => { clicksDownload++; });
-    document.getElementById('chinaDownload').addEventListener('click', () => { clicksChinaDownload++; });
-    document.getElementById('instaLink').addEventListener('click', () => { clicksInstagram++; });
-    document.getElementById('tiktokLink').addEventListener('click', () => { clicksTikTok++; });
-
-    // ----------------- Daily Email -----------------
-    function sendDailyReport() {
-      const templateParams = {
-        clicks_download: clicksDownload,
-        clicks_china: clicksChinaDownload,
-        clicks_instagram: clicksInstagram,
-        clicks_tiktok: clicksTikTok
-      };
-
-      emailjs.send('service_8x8u31g', 'template_ou0s71w', templateParams)
-        .then(function(response) {
-           console.log('Email sent successfully!', response.status, response.text);
-        }, function(error) {
-           console.log('Failed to send email...', error);
-        });
-
-      clicksDownload = 0;
-      clicksChinaDownload = 0;
-      clicksInstagram = 0;
-      clicksTikTok = 0;
-    }
-
-    function tiempoHastaMedianoche() {
-      const now = new Date();
-      const nextMidnight = new Date();
-      nextMidnight.setHours(24,0,0,0);
-      return nextMidnight - now;
-    }
-
-    setTimeout(() => {
-      sendDailyReport();
-      setInterval(sendDailyReport, 24*60*60*1000);
-    }, tiempoHastaMedianoche());
-  </script>
 </body>
 </html>
